@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/image01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@drawable/nigth"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/okrugleniepaneli"
+        android:layout_width="match_parent"
+        android:layout_height="470dp"
+        app:cardCornerRadius="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/konteiner1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_info"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_margin="14dp"
+                android:text="Syndey, 19 May 2019 | 9:30PM"
+                android:textColor="@color/Gray"
+                app:layout_constraintEnd_toStartOf="@id/btn_some"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_some"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:background="@drawable/raunder"
+                android:text="Mumbai, India"
+                app:backgroundTint="@color/blue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/konteiner2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:id="@+id/cloudy"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/cloudy"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_info" />
+
+            <TextView
+                android:id="@+id/nadpisoblachko"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="70dp"
+                android:text="Cloudy"
+                android:textSize="17sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cloudy" />
+
+
+            <TextView
+                android:id="@+id/cifracelse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="110dp"
+                android:layout_marginTop="20dp"
+                android:text="29"
+                android:textSize="60dp"
+                app:layout_constraintStart_toStartOf="@id/cloudy"
+                app:layout_constraintTop_toBottomOf="@id/tv_info" />
+
+            <ImageView
+                android:id="@+id/gradusnadcifroi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="70dp"
+                android:src="@drawable/gradus"
+                app:layout_constraintStart_toEndOf="@id/cifracelse"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/gradusvverhu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="28dp"
+                android:text="35°C ↑"
+                android:textColor="@color/Gray"
+                android:textSize="20dp"
+                app:layout_constraintStart_toEndOf="@id/cifracelse"
+                app:layout_constraintTop_toBottomOf="@id/btn_some" />
+
+
+            <TextView
+                android:id="@+id/gradusvnizu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="60dp"
+                android:text="27°C ↓"
+                android:textColor="@color/Gray"
+                android:textSize="20dp"
+                app:layout_constraintStart_toEndOf="@id/cifracelse"
+                app:layout_constraintTop_toBottomOf="@id/btn_some"
+                tools:ignore="MissingConstraints" />
+
+            <ImageView
+                android:id="@+id/kaplishka"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="74dp"
+                android:layout_marginTop="44dp"
+                android:src="@drawable/kaplia"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cloudy" />
+
+            <TextView
+                android:id="@+id/vlajnost"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="4dp"
+                android:text="73%"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/kaplishka" />
+
+            <TextView
+                android:id="@+id/vnizuvlajnost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="66dp"
+                android:layout_marginBottom="228dp"
+                android:text="Humidity"
+                android:textColor="@color/Gray"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/vlajnost" />
+
+            <ImageView
+                android:id="@+id/barometer"
+                android:layout_width="36dp"
+                android:layout_height="34dp"
+                android:layout_marginStart="76dp"
+                android:layout_marginTop="36dp"
+                android:src="@drawable/barometer"
+                app:layout_constraintStart_toEndOf="@id/kaplishka"
+                app:layout_constraintTop_toBottomOf="@id/cifracelse" />
+
+            <TextView
+                android:id="@+id/mbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="54dp"
+                android:layout_marginTop="4dp"
+                android:text="1,009mBar"
+                app:layout_constraintStart_toEndOf="@id/vlajnost"
+                app:layout_constraintTop_toBottomOf="@id/barometer" />
+
+            <TextView
+                android:id="@+id/pressure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="56dp"
+                android:layout_marginTop="26dp"
+                android:text="Pressure"
+                android:textColor="@color/Gray"
+                app:layout_constraintStart_toEndOf="@id/vnizuvlajnost"
+                app:layout_constraintTop_toBottomOf="@id/barometer" />
+
+            <ImageView
+                android:id="@+id/veter"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="86dp"
+                android:layout_marginTop="50dp"
+                android:src="@drawable/veter"
+                app:layout_constraintStart_toEndOf="@id/barometer"
+                app:layout_constraintTop_toBottomOf="@id/gradusvnizu" />
+
+            <TextView
+                android:id="@+id/veterkmh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="66dp"
+                android:layout_marginTop="2dp"
+                android:text="11km/h"
+                app:layout_constraintStart_toEndOf="@id/mbar"
+                app:layout_constraintTop_toBottomOf="@id/veter"
+                tools:ignore="InvalidId" />
+
+            <TextView
+                android:id="@+id/windows"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="78dp"
+                android:layout_marginTop="4dp"
+                android:text="Wind"
+                android:textColor="@color/Gray"
+                app:layout_constraintStart_toEndOf="@+id/pressure"
+                app:layout_constraintTop_toBottomOf="@id/veterkmh" />
+
+            <ImageView
+                android:id="@+id/sunrise"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="76dp"
+                android:layout_marginTop="25dp"
+                android:src="@drawable/sunset"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/vnizuvlajnost" />
+
+            <TextView
+                android:id="@+id/vremiautrom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="70dp"
+                android:text="6:03AM"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sunrise" />
+
+            <TextView
+                android:id="@+id/sunrisesh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="72dp"
+                android:text="Sunrise"
+                android:textColor="@color/Gray"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/vremiautrom" />
+
+            <ImageView
+                android:id="@+id/sunap"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="112dp"
+                android:layout_marginTop="18dp"
+                android:src="@drawable/sun_up"
+                app:layout_constraintStart_toStartOf="@id/sunrise"
+                app:layout_constraintTop_toBottomOf="@id/pressure" />
+
+            <TextView
+                android:id="@+id/vremiavecherom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="62dp"
+                android:text="7:05PM"
+                app:layout_constraintStart_toEndOf="@id/vremiautrom"
+                app:layout_constraintTop_toBottomOf="@id/sunap" />
+
+            <TextView
+                android:id="@+id/sunsetting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="64dp"
+                android:text="Sunset"
+                android:textColor="@color/Gray"
+                app:layout_constraintStart_toEndOf="@id/sunrisesh"
+                app:layout_constraintTop_toBottomOf="@id/vremiavecherom" />
+
+            <ImageView
+                android:id="@+id/timing"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="86dp"
+                android:layout_marginTop="18dp"
+                android:src="@drawable/time"
+                app:layout_constraintStart_toEndOf="@id/sunap"
+                app:layout_constraintTop_toBottomOf="@+id/windows" />
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="80dp"
+                android:text="13h 1m "
+                app:layout_constraintStart_toEndOf="@id/sunap"
+                app:layout_constraintTop_toBottomOf="@id/timing" />
+
+            <TextView
+                android:id="@+id/nadpispodvremenem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="76dp"
+                android:text="Daytime"
+                android:textColor="@color/Gray"
+                app:layout_constraintStart_toEndOf="@id/sunsetting"
+                app:layout_constraintTop_toBottomOf="@id/time" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
